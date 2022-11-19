@@ -1,0 +1,63 @@
+@import url("../../../common/colors-css.css");
+
+.courses-images-root-container{
+  background-color: rgb(241, 241, 251);
+  padding: 20px 0px;
+}
+.courses-images-animation-container {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 40px 10px;
+  justify-content: center;
+  img {
+    margin: 0 40px;
+    background-color: var(--white);
+    display: block;
+    margin: 20px;
+    box-shadow: 1px 1px 20px gray;
+  }
+  .admissions {
+     color: red ;
+  }
+}
+
+.courses-images-root-container{
+  .admissions{
+    background-color: var(--white);
+    padding: 20px 0px;
+    .step{
+      padding: 20px;
+      position: relative;
+      box-shadow: 1px 1px 3px gray;
+      width: min(90vw , 400px);
+      margin: 20px auto;
+    }
+    h3{
+      text-align: center;
+    }
+    .step1::before {
+      position: absolute;
+      content: '1';
+      left: -10px ;
+      top: -10px;
+      width: 50px;
+      padding: 5px;
+      text-align: center;
+      color: white ;
+      display: inline-block;
+      background-color: blue;
+    }
+    .step2::before {
+      position: absolute;
+      content: '2';
+      left: -10px ;
+      top: -10px;
+      width: 50px;
+      padding: 5px;
+      text-align: center;
+      color: white ;
+      display: inline-block;
+      background-color: blue;
+    }
+  }
+}

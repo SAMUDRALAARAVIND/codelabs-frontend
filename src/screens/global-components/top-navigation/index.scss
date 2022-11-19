@@ -1,0 +1,60 @@
+@import url("../../common/colors-css.css");
+.root-container{ 
+    position: sticky;
+    z-index: 20;
+    top: 0px;
+    right: 0;
+    left: 0;
+    background-color: white;
+    display:flex;
+    flex-flow: row wrap ;
+    padding: 20px; 
+    justify-content: space-between;
+    box-shadow: 2px 2px 20px var(--shadow-gray) ;
+    .menu:hover{
+        background-color: black;
+        color: white ;
+        cursor: pointer;
+        border-radius: 50%;
+        outline: 10px solid black;
+    }
+    .link-header{
+        text-decoration: none ;
+    }
+    .btn{
+        padding: 5px;
+        cursor: pointer;
+        border: .3px solid gray ;
+        background-color: #e7e7e7;
+    }
+}   
+.link{
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+.link:hover {
+    color: var(--red-text);
+    background-color: var(--pink-background);
+}
+.nav-right-half{
+    display: flex;
+    flex-flow: row wrap ;
+    align-items: center;
+}
+
+
+@media (max-width: 600px) {
+    .nav-right-half{
+        flex-flow: column wrap;
+        position: absolute;
+        z-index: 10;
+        top: 70px;
+        height: 150px;
+        right: 0;
+        left: 0;
+        background-color:orange;
+        padding-bottom: 10px;
+        justify-content: space-around;
+    }
+}

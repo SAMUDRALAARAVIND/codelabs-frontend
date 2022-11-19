@@ -1,0 +1,23 @@
+@import url("../../common/colors-css.css");
+.demo-lectures{
+    .video-list{
+        background-color: #e7e7e7;
+        padding: 40px;
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        .video{
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            border: 0.2px solid gray;
+            margin: 10px 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p{
+                font-weight: bold;
+            }
+        }
+    }
+}

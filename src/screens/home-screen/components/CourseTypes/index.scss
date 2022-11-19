@@ -1,0 +1,18 @@
+@import url("../../../common/colors-css.css");
+.course-types-root-container {
+    display: flex;
+    flex-flow: row wrap ;
+    justify-content: center;
+   .card{
+        margin: 20px;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        width: 200px;
+        padding: 10px;
+        box-shadow: 1px 1px 20px var(--shadow-gray);
+    img{
+        width: min(200px, 90vw);
+    }
+   }
+}

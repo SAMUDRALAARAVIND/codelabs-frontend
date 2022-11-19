@@ -1,0 +1,50 @@
+
+.reach-cards-container {
+    padding: 10px;
+    .reach-card-container{
+        display: flex;
+        flex-flow: row ;
+        justify-content: space-evenly;
+        padding: 10px;
+        background-color: #F6F8FA;
+    }
+    .reach-card-left {
+        width: 40% ;
+        background-color: white;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        font-weight: 600;
+        color: orange;
+        border: 0.01px dotted gray ;
+    }
+    .reach-card-right {
+        border-radius: 5px;
+        width: 50% ;
+        background-color: white;
+        padding: 5px;
+        font-size: 14px;
+        box-shadow: 2px 2px 10px #e7e7e7;
+        color: blue ;
+    }
+}
+
+@media (max-width: 700px) {
+    .reach-cards-container {
+        .reach-card-container{
+            flex-flow: column wrap;
+            border: 1px dotted gray ;
+            margin: 20px 0;
+            .reach-card-left{
+                width: 100% ;
+                border: none ;
+            }
+            .reach-card-right {
+                width: 100%;
+            }
+        }
+    }
+    
+}

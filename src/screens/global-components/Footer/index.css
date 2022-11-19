@@ -1,0 +1,28 @@
+@import url("../../common/colors-css.css");
+
+.footer-root-container{
+    background-color: black !important;
+    border: 100px;
+    padding: min(20px, 10vw);
+    color: white;
+}
+.footer-social-media{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 20px 0px;
+    border-top: 0.2px solid white;
+    border-bottom: 0.2px solid white;
+}
+.footer-social-media-right{
+    display: flex;
+    align-items: center ;
+}
+.footer-links {
+    display: flex;
+    flex-flow: column ;
+}
+.footer-links .footer-link {
+    text-decoration: none ;
+    margin: 5px 0; 
+}   

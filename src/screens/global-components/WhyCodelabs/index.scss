@@ -1,0 +1,33 @@
+.why-codelabs-root-container{
+    .cards-container{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        .card-container{
+            width: 300px;
+            padding: 10px;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            background-color: white;
+            box-shadow: 2px 2px 20px #e7e7e7;
+            margin: 10px;
+            border-radius: 10px;
+            .image{
+                width: 50px;
+                background-color:antiquewhite;
+                border-radius: 5px;
+                padding: 10px;
+            }
+            .title{
+                font-weight: 600;
+                font-size: 18px;
+                color: rgb(195, 3, 243) ;
+            }
+            .description{
+                font-size: 14px;
+                color: gray
+            }
+        }
+    }
+}

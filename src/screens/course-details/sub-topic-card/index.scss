@@ -1,0 +1,42 @@
+@import url("../../common/colors-css.css");
+.subtopics-root-container{
+    width: min(400px, 90vw);
+    color: #65668E ;
+    border: .1px solid ;
+    background-color: #FBFBFB;
+    margin: 10px;
+    border-radius: 4px;
+    .title{
+        padding: 20px;
+        border-bottom: 0.2px solid;
+
+    }
+    .subtopics{
+        padding: 20px 5px;
+       .subtopic-item {
+            padding: 8px 24px ;
+            display: flex;
+            flex-flow: row wrap;
+            p{
+                margin-left: 8px;
+            }
+            p:hover{
+                color: blue ;
+                cursor: pointer;
+            }
+       }
+       .subtopic-item:first-child:before{
+        background-color:#FBFBFB ;
+       }
+       .subtopic-item::before{
+            width: 2px;
+            height: 21px;
+            background-color: #65668E;
+            content: '';
+            display: inline-block;
+            position: relative;
+            bottom: 18px;
+            left: 13px;
+       }
+    }
+}

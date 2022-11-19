@@ -1,0 +1,80 @@
+@import url("../common/colors-css.css");
+
+.course-details-root-container {
+    background-color: #F3F2EF;
+    .main-container{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-evenly;
+        .navigation{
+            line-height: 40px;
+            width: 30%;
+            padding: 20px;
+            height: 200px;
+            position: sticky;
+            top: 100px;
+            background-color: white;
+            border-radius: 10px;
+            border: 0.1px solid  rgb(208, 196, 196);
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            a{
+                text-decoration: none;
+                color: blue 
+            }
+        }
+        .topic-container{
+            width: 60% ;
+            .topic-item{
+                margin: 20px ;
+                background-color: white;
+                border: 1px solid rgb(208, 196, 196) ;
+            }
+        }
+        .header {
+            padding: 20px;
+            background-color:#E3F0FB ;
+            .header-title{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-bottom: 4px solid #0456F3;
+                padding-bottom: 10px;
+                .card {
+                    padding: min(8vw , 30px) ;
+                    background-color: #0456F3;
+                    font-size: 20px;
+                    color: var(--white);
+                    border-radius: 5px; 
+                    margin-right: 10px;
+                }
+            }
+            .header-description {
+                p {
+                    margin: 10px;
+                }
+            }
+        }
+        .syllabus{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+    }
+}
+@media (max-width: 700px) {
+    .course-details-root-container{
+        .main-container {
+            .navigation{
+                display: none;
+            }
+            .topic-container{
+                width: 100vw;
+                margin: 0
+            }
+      }
+    }
+    
+}

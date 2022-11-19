@@ -1,0 +1,19 @@
+@import url("../../common/colors-css.css");
+*::selection {
+    background-color: red;
+}
+.editor-root-container {
+    .editor {
+        margin: auto ;
+        width:  600px !important;
+        border-radius: 5px;
+        background-color: #15222E;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    @media (max-width: 600px) {
+        .editor {
+            width: 90vw !important;
+        }
+    }
+}
+

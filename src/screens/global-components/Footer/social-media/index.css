@@ -1,0 +1,13 @@
+@import url("../../../common/colors-css.css");
+.footer-root-container {
+    background-color: var(--dark-footer) ;
+}
+
+.social-media-icons-root-container{
+    display: inline-flex;
+    flex-flow: row wrap ;
+    width: min(200px, 50vw) ;
+    justify-content: space-around;
+    color: var(--social-media-icon) ;
+    cursor: pointer;
+}
