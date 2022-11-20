@@ -32,7 +32,7 @@ export const CourseCard = ({course}:{course: any}) => {
             {
                 course?.cardDetails?.bottomValues?.map((text:any, key:any) => {
                     return (
-                        <div>
+                        <div key={key}>
                             {
                                 key === 0 ? <AccessAlarmIcon /> : key === 1 ? <CalendarMonthIcon /> : <CurrencyRupeeIcon />
                             }

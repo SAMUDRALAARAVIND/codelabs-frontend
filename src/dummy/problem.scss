@@ -1,0 +1,17 @@
+.problem-statement-root-container {
+    padding: 20px;
+    border: 1px solid #e7e7e7;
+    border-top: none;
+    height: 70vh ;
+    overflow-y: scroll;
+    p{
+        margin: 10px 5px;
+    }
+    .example-container {
+        padding: 10px ;
+        .example {
+            background-color: #F7F9FA;
+            padding: 10px;
+        }
+    }
+}

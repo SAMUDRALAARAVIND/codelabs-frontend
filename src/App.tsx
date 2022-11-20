@@ -4,11 +4,11 @@ import {
   Routes
 } from 'react-router-dom';
 
-import { BlogScreen } from './screens/blog-screen';
 import { CourseDetailsScreen } from './screens/course-details';
 import { CoursesScreen } from './screens/courses-screen';
 import { DemoLectures } from './screens/global-components/demo-lectures';
 import { HomeScreen } from "./screens/home-screen";
+import { Problem } from './screens/Problem';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Route path="/courses" element={<CoursesScreen />} />
         <Route path='/course-details/:courseId'  element={<CourseDetailsScreen />} />
         <Route path='/demo' element={<DemoLectures />} />
-        <Route path='/blog' element={<BlogScreen />} />
+        <Route path="/problem" element={<Problem />} />
       </Routes>
     </Router>
   );
