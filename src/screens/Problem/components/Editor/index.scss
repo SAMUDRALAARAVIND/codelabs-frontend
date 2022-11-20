@@ -1,0 +1,36 @@
+.code-editor-container {
+    align-self: stretch;
+    position: relative;
+    code-editor{
+        background-color: #2B2B2B !important;
+    }
+    .theme-settings{
+        position: absolute;
+        right: 10px;
+        top: -30px;
+        cursor: pointer;
+    }   
+    .btn-group{
+        display: flex;
+        flex-flow: row-reverse wrap;
+        padding: 6px 0px;
+        background-color: #e7e7e7;
+        button{
+            margin: 0px 20px;
+            border: none ;
+            padding: 5px 10px;
+            cursor: pointer;
+            background-color: white;
+            border-radius: 4px;
+            outline: 1px solid #e7e7e7;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-around;
+        }
+        button:hover{
+            background-color: blue;
+            color: white;
+        }
+    }
+}

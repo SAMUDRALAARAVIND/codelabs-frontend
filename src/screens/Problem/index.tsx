@@ -1,6 +1,6 @@
 import { TopNavigation } from "../global-components/top-navigation"
 import "./index.scss"
-import { useCallback, useState } from "react";
+import {useState } from "react";
 import {topTabs , Tab, tabIdentifiers} from "./components/problem-model"
 import { TopTab } from "./components/TopTab";
 import { Editor } from "./components/Editor";
@@ -11,10 +11,6 @@ import { Description } from "./components/Description";
 
 export const Problem = () => {
     const [activeTab , setActiveTab] = useState<string>(topTabs[0].identifier)
-
-    const changeTab = useCallback((identifier: string) => {
-        setActiveTab(identifier)
-    }, [])
 
     return (
         <div className="problem-root-container">
@@ -27,7 +23,7 @@ export const Problem = () => {
                                         title={tab?.title} 
                                         identifier={tab?.identifier} 
                                         key={key} 
-                                        onClick={changeTab}
+                                        onClick={setActiveTab}
                                         activeTab={activeTab}
                                         icon={tab.icon}
                                     />
@@ -38,15 +34,18 @@ export const Problem = () => {
                     {
                         activeTab === tabIdentifiers.DESCRIPTION &&
                         <div className="editor-included">
-                            <Description />
-                            <Editor />
+                            <div className="description">
+                                <Description />
+                            </div>
+                            <div className="editor">
+                                <Editor />
+                            </div>
                         </div>
                     }
                     {
                         activeTab === tabIdentifiers.SOLUTION && 
                         <div className="editor-included">
                             <Solution />
-                            <Editor />
                         </div>
                     }
                     {
@@ -54,12 +53,11 @@ export const Problem = () => {
                         <div>
                             <Discussions />
                         </div>
-                    },
+                    }
                     {
                         activeTab === tabIdentifiers.SUBMISSIONS &&
                         <div className="editor-included">
                             <Submissions />
-                            <Editor />
                         </div>
                     }
                 </div>
