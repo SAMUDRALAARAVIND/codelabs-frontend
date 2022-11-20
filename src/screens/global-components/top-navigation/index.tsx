@@ -8,6 +8,11 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 const linksList = [
   {
+    to:'/problem',
+    displayText: 'Problem',
+    identifier: 'PROBLEM',
+  },
+  {
     to:"/",
     displayText: 'Home',
     identifier:'HOME'
@@ -21,11 +26,6 @@ const linksList = [
     to: "/",
     displayText: "Refer & Earn",
     identifier: 'REFER_AND_EARN'
-  },
-  {
-    to:'/blog',
-    displayText: 'Blogs',
-    identifier: 'BLOGS'
   },
 ];
 interface TopNavigationProps {

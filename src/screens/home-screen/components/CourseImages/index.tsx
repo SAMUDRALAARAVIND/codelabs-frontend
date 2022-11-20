@@ -29,7 +29,12 @@ export const CoursesImagesAnimation= () => {
            {
             imagesList.map((image, key) => {
                 return (
-                    <img src={`/images/courses/${image}`} width="100" height="100" key={key} />
+                    <img 
+                        key={key} 
+                        src={`/images/courses/${image}`} 
+                        width="100" 
+                        height="100" 
+                    />
                 )
             })
            }
@@ -39,7 +44,7 @@ export const CoursesImagesAnimation= () => {
                 {
                     admissionSteps.map((step , key) => {
                         return (
-                            <div className={"step "+`step${key+1}`}>
+                            <div className={"step "+`step${key+1}`} key={key}>
                                 <h3 s-no="1">{step.title}</h3>
                                 <p s-no="2">{step.description}</p>
                             </div>

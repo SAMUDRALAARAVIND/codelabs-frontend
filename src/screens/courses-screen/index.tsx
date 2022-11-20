@@ -2,8 +2,7 @@ import { CourseCard } from "./CourseCard"
 import { Footer } from "../global-components/Footer"
 import { TopNavigation } from "../global-components/top-navigation"
 import { courses } from "../data/courses"
-import { observer } from "@legendapp/state/react"
-export const CoursesScreen = observer(() => {
+export const CoursesScreen = () => {
 
     return (
         <div>
@@ -26,4 +25,4 @@ export const CoursesScreen = observer(() => {
             <Footer />
         </div>
     )
-})
+}

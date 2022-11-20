@@ -28,7 +28,7 @@ export const CourseTypes = () => {
             {
                 courseTypesList.map((courseType, key) => {
                     return (
-                        <div className="card">
+                        <div className="card" key={key}>
                             <img src={courseType.url} />
                             <b style={{color: courseType.color}}>{courseType.title}</b>
                         </div>
