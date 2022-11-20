@@ -7,25 +7,21 @@ import { Link } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 
 const linksList = [
-  {
-    to:'/problem',
-    displayText: 'Problem',
-    identifier: 'PROBLEM',
-  },
+  
   {
     to:"/",
     displayText: 'Home',
     identifier:'HOME'
   },
   {
+    to:'/problem',
+    displayText: 'Problems',
+    identifier: 'PROBLEMS',
+  },
+  {
     to: "/courses",
     displayText: "Courses",
     identifier: 'COURSES'
-  },
-  {
-    to: "/",
-    displayText: "Refer & Earn",
-    identifier: 'REFER_AND_EARN'
   },
 ];
 interface TopNavigationProps {

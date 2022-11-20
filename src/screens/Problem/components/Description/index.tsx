@@ -2,7 +2,7 @@ import { ProblemStatement } from "../../../../dummy/Problem"
 
 export const Description = () => {
     return (
-        <div style={{width: '45vw'}}>
+        <div>
             <ProblemStatement />
         </div>
     )
