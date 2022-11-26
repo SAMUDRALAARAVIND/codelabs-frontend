@@ -10,7 +10,8 @@
     flex-flow: row wrap ;
     padding: 20px; 
     justify-content: space-between;
-    box-shadow: 2px 2px 20px var(--shadow-gray) ;
+    // box-shadow: 2px 2px 5px var(--shadow-gray) ;
+    border-bottom: 5px solid var(--shadow-gray);
     .menu:hover{
         background-color: black;
         color: white ;

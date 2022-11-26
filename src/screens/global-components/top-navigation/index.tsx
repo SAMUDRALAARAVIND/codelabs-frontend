@@ -14,7 +14,7 @@ const linksList = [
     identifier:'HOME'
   },
   {
-    to:'/problem',
+    to:'/problems',
     displayText: 'Problems',
     identifier: 'PROBLEMS',
   },

@@ -1,15 +1,7 @@
-.problem-statement-root-container {
-    padding: 20px;
-    border: 1px solid #e7e7e7;
-    border-top: none;
-    p{
-        margin: 10px 5px;
-    }
-    .example-container {
-        padding: 10px ;
-        .example {
-            background-color: #F7F9FA;
-            padding: 10px;
-        }
+.problem-container{
+    .problem-header {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
     }
 }

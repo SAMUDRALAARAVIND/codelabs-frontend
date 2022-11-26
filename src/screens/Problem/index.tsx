@@ -1,67 +1,36 @@
-import { TopNavigation } from "../global-components/top-navigation"
-import "./index.scss"
-import {useState } from "react";
-import {topTabs , Tab, tabIdentifiers} from "./components/problem-model"
-import { TopTab } from "./components/TopTab";
+import { observer } from "@legendapp/state/react";
+import { useEffect, useRef } from "react"
+import { useParams } from "react-router-dom"
 import { Editor } from "./components/Editor";
-import { Solution } from "./components/Solution";
-import { Discussions } from "./components/Discussions";
-import { Submissions } from "./components/Submissions";
-import { Description } from "./components/Description";
+import { ProblemStatement } from "./components/ProblemStatement";
+import { createProblemModel } from "./problem-model"
+import "./index.scss"
+import { TopNavigation } from "../global-components/top-navigation";
 
-export const Problem = () => {
-    const [activeTab , setActiveTab] = useState<string>(topTabs[0].identifier)
+export const Problem = observer(() => {
+    const {problem_id} = useParams()
+    const problemModel$ = useRef(createProblemModel()).current
+
+    useEffect(() => {
+        problemModel$.actions.fetchProblemById({problem_id: String(problem_id)})
+    }, [])
+
+    if(problemModel$?.obs?.apiStatus?.get?.() === 'pending'){
+        return <h1>Loading...</h1>
+    }
 
     return (
-        <div className="problem-root-container">
+        <section style={{backgroundColor: '#e7e7e7'}}>
             <TopNavigation />
-            <div className="problem-container">
-                <div className="root-toptabs">
-                    {
-                        topTabs?.map?.((tab: Tab, key) => {
-                            return <TopTab 
-                                        title={tab?.title} 
-                                        identifier={tab?.identifier} 
-                                        key={key} 
-                                        onClick={setActiveTab}
-                                        activeTab={activeTab}
-                                        icon={tab.icon}
-                                    />
-                        })
-                    }
+            <div className="problem-root-container">
+                <div className="problem-statement" style={{width: '50vw'}}>
+                    {/* @ts-ignore */}
+                    <ProblemStatement problem={problemModel$.obs.data?.get?.()}/>
                 </div>
-                <div className="children-component-container">
-                    {
-                        activeTab === tabIdentifiers.DESCRIPTION &&
-                        <div className="editor-included">
-                            <div className="description">
-                                <Description />
-                            </div>
-                            <div className="editor">
-                                <Editor />
-                            </div>
-                        </div>
-                    }
-                    {
-                        activeTab === tabIdentifiers.SOLUTION && 
-                        <div className="editor-included">
-                            <Solution />
-                        </div>
-                    }
-                    {
-                        activeTab === tabIdentifiers.DISCUSSIONS &&
-                        <div>
-                            <Discussions />
-                        </div>
-                    }
-                    {
-                        activeTab === tabIdentifiers.SUBMISSIONS &&
-                        <div className="editor-included">
-                            <Submissions />
-                        </div>
-                    }
+                <div className="editor">
+                    <Editor />
                 </div>
             </div>
-        </div>
+        </section>
     )
-}
+});
