@@ -23,7 +23,7 @@ export const Problem = observer(() => {
         <section style={{backgroundColor: '#e7e7e7'}}>
             <TopNavigation />
             <div className="problem-root-container">
-                <div className="problem-statement" style={{width: '50vw'}}>
+                <div className="problem-statement" style={{width: '30vw'}}>
                     {/* @ts-ignore */}
                     <ProblemStatement problem={problemModel$.obs.data?.get?.()}/>
                 </div>

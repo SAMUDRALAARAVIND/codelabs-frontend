@@ -2,11 +2,16 @@
     background-color: white;
     display: flex;
     flex-flow: row wrap;
-    padding: 20px;
     height: 80vh;
+    font-size: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    ::-webkit-scrollbar {
+        width: 20px;
+      }
     .problem-statement {
         overflow-y: scroll;
         height: 100%;
+        font-size: 10px;
     }
     .editor{
         align-self: stretch;

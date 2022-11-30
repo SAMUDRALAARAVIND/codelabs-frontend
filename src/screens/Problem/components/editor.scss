@@ -1,5 +1,18 @@
 .code-editor-container {
-    color: red;
+  .top-container{
+    background-color: #FAFAFA;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    .left-options{}
+    .right-options{
+      display: flex;
+      justify-content: row wrap;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 200px;
+    }
+  }
   .bottom-container {
     padding-bottom: 20px;
     background-color: rgb(247,249,250);
