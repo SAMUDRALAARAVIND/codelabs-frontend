@@ -14,7 +14,7 @@ const linksList = [
     identifier:'HOME'
   },
   {
-    to:'/problem',
+    to:'/problems',
     displayText: 'Problems',
     identifier: 'PROBLEMS',
   },
@@ -23,6 +23,11 @@ const linksList = [
     displayText: "Courses",
     identifier: 'COURSES'
   },
+  {
+    to:"/practice",
+    displayText: 'Practice',
+    identifier:'PRACTICE'
+  }
 ];
 interface TopNavigationProps {
   currentScreen?: string

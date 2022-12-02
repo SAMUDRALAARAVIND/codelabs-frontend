@@ -1,26 +1,16 @@
-
-.problem-root-container {
-  .problem-container {
-    .root-toptabs {
-      display: flex;
-      flex-flow: row wrap;
-      margin: 20px;
+.problem-root-container{
+    background-color: #191919;
+    font-size: 10px;
+    display: flex;
+    .problem-statement {
+        color:white;
+        flex-grow: 0.1;
+        width: 40%;
+        height: 75vh;
+        overflow-y: scroll;
     }
-    .children-component-container {
-      height: 100%;
-      .editor-included {
-        display: flex;
-        flex-flow: row;
-        .description {
-            width: 50%;
-            height: 68vh;
-            overflow-y: scroll;
-        }   
-        .editor {
-            width: 50% ;
-            height: 68vh;
-        }
-      }
+    .editor {
+        width: 60%;
+        flex-grow: 1;
     }
-  }
 }

@@ -1,0 +1,37 @@
+.problem-statement-root-container{
+    padding: 20px;
+    border: 1px solid #e7e7e7;
+    .header{
+        .title{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        .badge{
+            background-color: blue;
+            display: inline-block;
+            margin: 10px 0;
+            padding: 4px;
+            border-radius: 2px;
+        }
+    }
+    .problem-statement-root-container{
+        line-height: 25px;
+        p{
+            margin: 10px 0;
+        }
+        .example-container{
+            background-color: #242424;
+            border-radius: 5px;
+            padding: 10px;
+            margin:10px 0px;
+        }
+        h3{
+            margin: 10px 0;
+        }
+        ul,ol{
+            padding: 10px 20px;
+            border: 2px solid #e7e7e7 ;
+        }
+    }
+}
