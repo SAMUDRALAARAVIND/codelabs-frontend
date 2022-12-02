@@ -65,7 +65,7 @@ export const FrontEnd = () => {
                   </div>
                   <CodeMirror
                     style={{overflowY:'hidden'}}
-                    height={'400px'}
+                    height={`${editorHeight}px`}
                     theme={dark}
                     value={cssCode}
                     onChange={setCssCode}
@@ -79,7 +79,7 @@ export const FrontEnd = () => {
                   </div>
                   <CodeMirror
                     style={{overflowY:'hidden'}}
-                    height={'400px'}
+                    height={`${editorHeight}px`}
                     theme={dark}
                     value={jsCode}
                     onChange={setJsCode}
