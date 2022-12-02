@@ -1,17 +1,15 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import CodeMirror from "@uiw/react-codemirror";
 import { createTheme } from "@uiw/codemirror-themes";
 import { javascript } from "@codemirror/lang-javascript";
 import { tags as t } from "@lezer/highlight";
 import "./editor.scss";
-import { createEditorModel } from "../editor-model";
+import { createEditorModel } from "../../editor-model";
 import { observer, useObservable } from "@legendapp/state/react";
-import { Select } from "antd";
 import BrightIcon  from '@mui/icons-material/Brightness4Outlined';
 import DarkIcon from '@mui/icons-material/Brightness4';
 import { batch } from "@legendapp/state";
-import { Extension } from "@codemirror/state";
-import { OutputSection } from "./outputSection";
+import { OutputBottomDrawer } from "../outputSection/index";
 
 const darkTheme = createTheme({
   theme: "dark",
@@ -131,7 +129,7 @@ export const Editor = observer(() => {
       <div className="top-container">
         <div className="left-options"></div>
         <div className="right-options">
-          <select onChange={changeLanguage}>
+          <select onChange={changeLanguage} className="language-picker">
             {
               languageOptions.map((language, key) => {
                 return (
@@ -141,7 +139,7 @@ export const Editor = observer(() => {
             }
           </select>
           {
-            themeText?.get?.() === 'dark' ? <DarkIcon onClick={toggleTheme} /> : <BrightIcon onClick={toggleTheme}/>
+            themeText?.get?.() === 'dark' ? <DarkIcon color="info"  className="theme-icon" onClick={toggleTheme} /> : <BrightIcon color="info" className="theme-icon"  onClick={toggleTheme}/>
           }
         </div>
       </div>
@@ -152,10 +150,10 @@ export const Editor = observer(() => {
         onChange={onChange}
         theme={themeObject?.get?.()}
       />
+      <div className="output-bottom-drawer">
+          <OutputBottomDrawer />
+      </div>
       <div className="bottom-container">
-        <div>
-          <OutputSection />
-        </div>
         <div className="btn-group">
           <button className="btn outlined-btn" onClick={runCode}>
             Run Code

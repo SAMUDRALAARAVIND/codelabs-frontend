@@ -1,21 +1,27 @@
 .code-editor-container {
   .top-container{
-    background-color: #FAFAFA;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    .left-options{}
+    padding: 10px;
     .right-options{
       display: flex;
       justify-content: row wrap;
       align-items: center;
       justify-content: space-evenly;
       width: 200px;
+      .language-picker{
+        padding: 5px;
+        border: none ;
+        margin-right: 20px;
+      }
+      .theme-icon {
+        margin-right: 100px;
+      }
     }
   }
   .bottom-container {
     padding-bottom: 20px;
-    background-color: rgb(247,249,250);
     .btn-group {
       display: flex;
       flex-flow: row wrap;
@@ -36,7 +42,6 @@
       } 
       .outlined-btn {
         border: 1px solid blue;
-        background-color: white;
         font-weight: 600;
         color: blue;
       }

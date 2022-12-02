@@ -1,8 +1,11 @@
 .outut-section-root-container{
-    height: 200px;
-    width: 100%;
-    background-color: red;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    .bottom-drawer{
+        width: 60%;
+        float:right;
+        margin-right:20px;
+        background-color: blue !important;
+    }
+    .close-drawer-icon{ 
+            cursor: pointer;
+    }
 }

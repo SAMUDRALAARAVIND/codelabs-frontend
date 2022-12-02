@@ -1,8 +1,8 @@
 import { observer } from "@legendapp/state/react";
 import { useEffect, useRef } from "react"
 import { useParams } from "react-router-dom"
-import { Editor } from "./components/Editor";
-import { ProblemStatement } from "./components/ProblemStatement";
+import { Editor } from "./components/Editor/Editor";
+import { ProblemStatement } from "./components/ProblemStatement/ProblemStatement";
 import { createProblemModel } from "./problem-model"
 import "./index.scss"
 import { TopNavigation } from "../global-components/top-navigation";
@@ -20,10 +20,10 @@ export const Problem = observer(() => {
     }
 
     return (
-        <section style={{backgroundColor: '#e7e7e7'}}>
+        <section style={{backgroundColor: '#191919'}}>
             <TopNavigation />
             <div className="problem-root-container">
-                <div className="problem-statement" style={{width: '30vw'}}>
+                <div className="problem-statement">
                     {/* @ts-ignore */}
                     <ProblemStatement problem={problemModel$.obs.data?.get?.()}/>
                 </div>

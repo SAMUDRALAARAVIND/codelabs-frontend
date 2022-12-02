@@ -23,6 +23,11 @@ const linksList = [
     displayText: "Courses",
     identifier: 'COURSES'
   },
+  {
+    to:"/practice",
+    displayText: 'Practice',
+    identifier:'PRACTICE'
+  }
 ];
 interface TopNavigationProps {
   currentScreen?: string

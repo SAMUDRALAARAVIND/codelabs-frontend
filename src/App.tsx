@@ -11,6 +11,7 @@ import { HomeScreen } from "./screens/home-screen";
 import { Test } from './dummy/Test';
 import { Problem } from './screens/Problem';
 import { ProblemsList } from './screens/Problems';
+import { FrontEnd } from './screens/Frontend';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/test" element={<Test/>} />
         <Route path="/problem/:problem_id" element={<Problem />} />
         <Route path="/problems" element={<ProblemsList />} />
+        <Route path="/practice" element={<FrontEnd />} />
       </Routes>
     </Router>
   );
