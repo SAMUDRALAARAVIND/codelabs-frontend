@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "@codemirror/lang-cpp": "^6.0.2",
+    "@codemirror/lang-css": "^6.0.1",
     "@codemirror/lang-javascript": "^6.1.1",
+    "@codemirror/lang-xml": "^6.0.1",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@legendapp/state": "^0.22.0",
